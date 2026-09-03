@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .bg { fill: #0b1220 }
+    .panel { fill: #0f1720; stroke: #263244; stroke-width:2}
+    .card { fill: #0b1220; stroke: #1b2b3a; stroke-width:1 }
+    .accent { fill: #2ea44f }
+    .muted { fill: #9aa7b2 }
+    .label { fill: #c9d6df; font-family: Arial, Helvetica, sans-serif; font-size:14px }
+    .title { fill: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size:18px; font-weight:700 }
+    .highlight { stroke: #ffdf5d; stroke-width:4; fill: none }
+  </style>
+  <rect width="1200" height="700" fill="#0f1720"/>
+  <!-- Top nav -->
+  <rect x="0" y="0" width="1200" height="60" fill="#0b1220"/>
+  <text x="24" y="38" class="title">GitHub — Repository</text>
+  <!-- Actions tab -->
+  <g>
+    <rect x="200" y="14" width="96" height="32" rx="6" fill="#111827"/>
+    <text x="218" y="36" class="label">Actions</text>
+    <rect x="198" y="12" width="100" height="36" class="highlight"/>
+  </g>
+
+  <!-- Left column: workflows list -->
+  <rect x="24" y="80" width="320" height="580" class="panel" rx="8"/>
+  <text x="40" y="108" class="label">Workflows</text>
+  <g>
+    <rect x="40" y="130" width="280" height="56" rx="6" class="card"/>
+    <text x="54" y="162" class="title">flutter.yml</text>
+    <text x="54" y="182" class="muted">Last run: feature/ci-fix-clean</text>
+    <rect x="36" y="126" width="288" height="64" class="highlight"/>
+  </g>
+  <g>
+    <rect x="40" y="198" width="280" height="56" rx="6" class="card"/>
+    <text x="54" y="230" class="title">Other workflow</text>
+    <text x="54" y="250" class="muted">Last run: main</text>
+  </g>
+
+  <!-- Main column: run details -->
+  <rect x="360" y="80" width="816" height="580" class="panel" rx="8"/>
+  <text x="380" y="108" class="label">Runs for flutter.yml</text>
+
+  <!-- A single run card -->
+  <rect x="380" y="130" width="760" height="140" rx="8" fill="#071225" stroke="#1f425b"/>
+  <text x="404" y="162" class="title">Feature/ci-fix-clean — Workflow run</text>
+  <text x="404" y="188" class="muted">Triggered by: push • Branch: feature/ci-fix-clean</text>
+
+  <!-- Jobs list -->
+  <rect x="404" y="214" width="340" height="40" rx="6" fill="#062032" stroke="#16334a"/>
+  <text x="420" y="240" class="label">1. Setup Flutter (completed)</text>
+  <rect x="760" y="214" width="300" height="40" rx="6" fill="#062032" stroke="#16334a"/>
+  <text x="776" y="240" class="label">2. Analyze, test, build (running)</text>
+  <rect x="404" y="264" width="656" height="36" rx="6" class="highlight"/>
+
+  <!-- Logs area -->
+  <rect x="404" y="320" width="740" height="296" rx="6" fill="#00151f" stroke="#07323b"/>
+  <text x="420" y="344" class="muted">Job logs: click the job name → then click a step to view logs here.</text>
+  <text x="420" y="370" class="label">- Run: actions/checkout@v3</text>
+  <text x="420" y="392" class="label">- Setup Flutter</text>
+  <text x="420" y="414" class="label">- Flutter pub get</text>
+  <text x="420" y="436" class="label">- Flutter analyze</text>
+  <text x="420" y="458" class="label">- Flutter build apk --release</text>
+
+  <!-- Callout arrow -->
+  <path d="M320,160 L360,160 L360,130" fill="none" stroke="#ffdf5d" stroke-width="3"/>
+  <text x="260" y="150" class="label">Click this workflow, then choose the run and its job logs</text>
+
+  <!-- Footer note -->
+  <text x="24" y="680" class="muted">Open the repo on GitHub → Actions tab → select the workflow → select the run for `feature/ci-fix-clean`</text>
+</svg>
